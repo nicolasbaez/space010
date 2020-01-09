@@ -4,7 +4,7 @@
 
 ```processing
 int vert[]=new int[360];
-int vx[]={3, 4, 5, 6, 8, 9, 10, 12, 15, 18, 20, 24, 30, 36, 40, 45, 60, 72, 90};
+int vx[]={3, 4, 5, 6, 8, 9, 10, 12, 15, 18, 20, 24, 30, 36, 40, 45, 60, 72};
 int rr[]=new int[360];
 int gg[]=new int[360];
 int bb[]=new int[360];
@@ -20,7 +20,7 @@ void setup() {
     gg[i]=int(random(255));
     bb[i]=int(random(255));
     st[i]=int(random(128, 255));
-    rot[i]=random(1);
+    rot[i]=random(2);
     rotStart[i]=0;
   }
 }
@@ -44,7 +44,7 @@ void draw() {
     popMatrix();
     rotStart[i]+=rot[i];
   }
-  dRot+=0.18;
+  dRot+=0.36;
   if (dRot<360) {
     saveFrame("gif/space010-######.png");
   }
